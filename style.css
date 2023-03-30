@@ -1,0 +1,45 @@
+body {
+    background-color: black;
+    font-size: 24px;
+}
+
+.banner p {
+    color: white;
+    text-align: center;
+}
+
+
+#wrapper img {
+    margin-top: 20%;
+    width: 15%;
+    height: auto;
+}
+
+#Waning_Crescent {
+    background-color: black;
+    font-size: 24px;
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Waning_Crescent_Moon%287Sep15%29.jpg/900px-Waning_Crescent_Moon%287Sep15%29.jpg?20180208031522");
+    background-repeat: no-repeat;
+    
+}
+h1, h2, h3{
+    color: white;
+    text-align: right;
+}
+p {
+    color: white;
+    font-size: 18px;
+    text-align: right;
+    width: 40%;
+    margin-left: 60%;
+    line-height: 1.5;
+}
+a {
+    color: white;
+    text-decoration: none;
+    text-align: right;
+}
+#wanning_cresent img {
+    width: 50%;
+    height: auto;
+}
