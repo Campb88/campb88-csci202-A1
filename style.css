@@ -1,30 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,800;0,900;1,400&family=Quicksand:wght@300;400;600&display=swap');
+
+*{
+    font-family: 'Playfair Display', serif;
+    font-family: 'Quicksand', sans-serif;
+}
+
+
 body {
     background-color: black;
     font-size: 24px;
+    margin-left: 8%;
+    margin-top: 5%;
 }
 
-.banner p {
-    color: white;
-    text-align: center;
+#wrapper {
+    width: 90%;
 }
 
+#moons {
+    width: 100%;
+    margin-top: 5%;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-around;
+}
 
-#wrapper img {
-    margin-top: 20%;
-    width: 15%;
+#moons img {
+    width: 100px;
     height: auto;
+    /* border: #fff 2px solid; */
 }
 
-#Waning_Crescent {
-    background-color: black;
-    font-size: 24px;
-    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Waning_Crescent_Moon%287Sep15%29.jpg/900px-Waning_Crescent_Moon%287Sep15%29.jpg?20180208031522");
-    background-repeat: no-repeat;
-    
-}
+
 h1, h2, h3{
     color: white;
-    text-align: right;
+    text-align: center;
 }
 p {
     color: white;
@@ -39,7 +50,38 @@ a {
     text-decoration: none;
     text-align: right;
 }
-#wanning_cresent img {
-    width: 50%;
+.banner-text h1{
+    text-align: left;
+}
+
+.button {
+    background-color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    color: black;
+    width: 100px;
     height: auto;
+    margin: 0;
+}
+
+footer {
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+}
+
+@media only all and (max-width: 1024px) {
+    #body {
+        width: 80%;
+    }
+    #moons {
+        display: block;
+        margin-left: 10%;
+    }
+    #moons img {
+        width: 25%;
+    }
 }
