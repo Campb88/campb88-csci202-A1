@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,500;1,900&display=swap');
+
+* {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+body {
+margin: 4%;
+padding: 0;
+
+background-image: linear-gradient(rgba(249, 249, 249, 0.8), rgba(249, 249, 249, 0.9)),
+  url(https://s40424.pcdn.co/in/wp-content/uploads/2022/07/info-systems.jpg.optimal.jpg);
+height: auto;
+width: 90%;
+background-size: cover;
+background-attachment: fixed;
+}
+
+header {
+  
+}
+
+nav {
+  position: fixed;
+  top: 0%;
+  right: 0%;
+  width: 300px;
+  
+}
+
+nav ul {
+  position: absolute;
+  display: inline-block;
+  padding: 5px;
+  width: 225px;
+  
+}
+
+nav li{
+  list-style-type: none;
+  display: none;
+  background-color: white;
+  padding: 5px;
+  border: 1px solid black;
+  width: 225px;
+
+}
+
+nav ul:hover li {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: black;  
+}
+
+nav li:hover {
+  background-color: #75b2d1;
+}
+
+img {
+width: 512px;
+margin-left: auto;
+margin-right: auto;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+article {
+  margin-top: 5%;
+}
+
+#sec_overview {
+  display: flex;
+  flex-flow: row wrap;
+  margin-bottom: 5%;
+}
+
+#opener {
+  flex: 1;
+  order: 2;
+}
+
+#sec_overview .text {
+  flex: 2;
+  order: 1;
+}
+
+#losinginfo {
+  margin-bottom: 5%;
+}
+
+
+#losinginfo ul li{
+  font-style: italic;
+
+}
+
+#linkedinfo {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+}
+
+#linkedinfo .nodes .arrows {
+  flex: 2;
+}
+
+table {
+border:0.5px solid black;
+background-color: #75b2d1;
+margin-left: auto;
+margin-right: auto;
+}
+
+th, td {
+border:0.5px solid black;
+}
+
+
+figcaption {
+    font-style: italic;
+    padding: 2px;
+    text-align: center;
+}
+
+#trees {
+  margin-top: 5%;
+  margin-bottom: 0;
+}
+
+#tree_problems {
+    display: flex;
+    flex-flow: row wrap;
+    margin-bottom: 5%;
+}
+
+#tree_problems .text {
+  flex: 1;
+}
+
+#key_problems {
+  margin-bottom: 5%;;
+}
+
+#hypertext {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+#hypertext .text {
+  flex: 1;
+}
+
+#requirements {
+  margin-top: 5%;
+}
+
+#requirements h3 {
+  background-color: #75b2d1;
+}
+
+#applications {
+  margin-top: 5%;
+}
+
+#applications h3 {
+  background-color: #75b2d1;
+}
+
+#hyperdemia {
+  margin-top: 5%;
+}
+
+.system {
+  display: flex;
+  flex-flow: row wrap;
+
+}
+
+.system .text {
+  flex: 1;
+}
+
+#access {
+  display: flex;
+  flex-flow: row wrap;
+  margin-top: 5%;
+}
+
+#access .text {
+  flex: 300px;
+}
+
+#access dt {
+  font-weight: bold;
+}
+
+#conclusion {
+  margin-top: 5%;
+}
+
+#references {
+  margin-top: 5%;
+}
+
