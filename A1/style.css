@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,800;0,900;1,400&family=Quicksand:wght@300;400;600&display=swap');
+
+*{
+    font-family: 'Playfair Display', serif;
+    font-family: 'Quicksand', sans-serif;
+}
+
+
+body {
+    background-color: black;
+    font-size: 24px;
+    margin-left: 8%;
+    margin-top: 5%;
+}
+
+#wrapper {
+    width: 90%;
+}
+
+#moons {
+    width: 100%;
+    margin-top: 5%;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#moons img {
+    width: 100px;
+    height: auto;
+    /* border: #fff 2px solid; */
+}
+
+
+h1, h2, h3{
+    color: white;
+    text-align: center;
+}
+p {
+    color: white;
+    font-size: 18px;
+    text-align: right;
+    width: 40%;
+    margin-left: 60%;
+    line-height: 1.5;
+}
+a {
+    color: white;
+    text-decoration: none;
+    text-align: right;
+}
+.banner-text h1{
+    text-align: left;
+}
+
+.button {
+    background-color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    color: black;
+    width: 100px;
+    height: auto;
+    margin: 0;
+}
+
+footer {
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+}
+
+@media only all and (max-width: 1024px) {
+    #body {
+        width: 80%;
+    }
+    #moons {
+        display: block;
+        margin-left: 10%;
+    }
+    #moons img {
+        width: 25%;
+    }
+}
