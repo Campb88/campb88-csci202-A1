@@ -8,16 +8,18 @@
     <link rel="stylesheet" href="style.css">
     <title>Animated Painting</title>
 
+    <script src="https://kit.fontawesome.com/8f3fbbdd15.js" crossorigin="anonymous"></script>
+
     <script src="script.js"></script>
 </head>
 
 <body id="body">
-    <h1>Reproduced Counter Composition XIII<br>
+    <h1 id="title">Reproduced Counter Composition XIII<br>
         by Theo Van Doesburg (1929)</h1><br>
     <div id="container" class="container">
         <div id="t1"></div>
 
-        <div id="t2" class="regular" onclick="animated(this)"></div>
+        <div id="t2" onclick="animated(this)"></div>
 
         <div id="t3"></div>
 
@@ -28,7 +30,11 @@
         <div id="t6"></div>
     </div>
 
-
+    <div id = "icon">
+        <a href="painting.html">
+            <i id = "next" class="fa-solid fa-angles-right fa-beat fa-2xl" style="color: #CA9E42"></i>
+        </a>
+    </div>
 
 
 </body>
