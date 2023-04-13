@@ -9,7 +9,7 @@ function animated(x) {
   var container = document.getElementById("container");
   container.style.animation = "container 30s infinite";
 
-  var t2 = document.getElementById("t2_2");
+  var t2 = document.getElementById("t2");
   t2.style.animation = "t2 30s infinite";
 
 
