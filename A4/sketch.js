@@ -66,6 +66,11 @@ let r = 0;
 let g = 0;
 let b = 0;
 
+function disappear() {
+  var icon = document.getElementById("icon");
+  icon.style.display= "none";
+}
+
 
 function setup() {
   createCanvas(1600, 900);
