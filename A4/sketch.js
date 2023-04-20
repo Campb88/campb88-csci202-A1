@@ -69,6 +69,8 @@ let b = 0;
 function disappear() {
   var icon = document.getElementById("icon");
   icon.style.display= "none";
+  var audio = document.getElementById("myAudio");
+  audio.play();
 }
 
 
