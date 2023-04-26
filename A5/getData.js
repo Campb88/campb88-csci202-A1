@@ -1,5 +1,4 @@
-
-$.getJSON('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&page=2&api_key=DEMO_KEY', function(data) {
+/* $.getJSON('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&page=2&api_key=DEMO_KEY', function(data) {
 
     data['photos'].forEach(function (d) {
         $('#cameraID').append('<li>' + d['id']+ '</li>');
@@ -13,68 +12,19 @@ $.getJSON('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1
         document.getElementById("img-container").appendChild(image);
     });
 });
+ */
 
 
+$.getJSON('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&count=1', function(data) {
 
+    data.forEach(function (d) {
+        $('#date').append('<li>' + d['date']+ '</li>');
+        $('#explanation').append('<li>' + d['explanation']+ '</li>');
+        $('#title').append('<li>' + d['title']+ '</li>');
 
-
-
-
-
-/* 
-$.getJSON('http://api.open-notify.org/astros.json?callback=?', function(data) {
-    var number = data['number'];
-    $('#SpacePeople').html(number);
-
-    data['people'].forEach(function (d) {
-        $('#astroNames').append('<li>' + d['name']+ '</li>');
+        var image = new Image();
+        image.src = d['hdurl'];
+        $('#image').append('<li>' + image + '</li>');
+        document.getElementById("img-container").appendChild(image);
     });
 });
-
-
-({
-    "message": "success",
-    "number": 10,
-    "people":
-        [{
-            "craft": "ISS",
-            "name": "Sergey Prokopyev"
-        },
-        {
-            "craft": "ISS",
-            "name": "Dmitry Petelin"
-        },
-        {
-            "craft": "ISS",
-            "name": "Frank Rubio"
-        },
-        {
-            "craft": "Shenzhou 15",
-            "name": "Fei Junlong"
-        },
-        {
-            "craft": "Shenzhou 15",
-            "name": "Deng Qingming"
-        },
-        {
-            "craft": "Shenzhou 15",
-            "name": "Zhang Lu"
-        },
-        {
-            "craft": "ISS",
-            "name": "Stephen Bowen"
-        },
-        {
-            "craft": "ISS",
-            "name": "Warren Hoburg"
-        },
-        {
-            "craft": "ISS",
-            "name": "Sultan Alneyadi"
-        },
-        {
-            "craft": "ISS",
-            "name": "Andrey Fedyaev"
-        }]
-})
- */
