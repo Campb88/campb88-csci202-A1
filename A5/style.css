@@ -43,13 +43,16 @@ h1 {
     width: 800px;
     font-size: 18px;
     margin-top: 2%;
-    margin-left: 12%;
+    margin-left: 8%;
 }
 
-a{
-    text-decoration: none;
+#archive {
     margin-left: 8%;
     width: 800px;
+}
+a{
+    text-decoration: none;
+
 }
 
 h3 {
