@@ -40,7 +40,7 @@ h1 {
 }
 
 #explanation {
-    width: 500px;
+    width: 800px;
     font-size: 18px;
     margin-top: 2%;
     margin-left: 12%;
@@ -53,5 +53,5 @@ a{
 h3 {
     padding-top: 2%;
     text-align: right;
-    width: 95%;
+    width: 800px;
 }
