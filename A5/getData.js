@@ -6,7 +6,7 @@ $.getJSON('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&count=1', functi
         $('#title').append(d['title']);
 
         var image = new Image();
-        image.src = d['hdurl'];
+        image.src = d['url'];
 /*         $('#image').append('<li>' + image + '</li>'); */
         document.getElementById("img-container").appendChild(image);
     });
