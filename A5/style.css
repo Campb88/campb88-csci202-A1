@@ -1,12 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
 * {
     background-color: black;
     color: #fff;
+    font-family: 'Space Mono', monospace;
 }
 
 img {
-    width: 80%;
-    height: auto;
-    margin-left: 10%;
+    width: 700px;
+    height: 700px;
+    margin-left: 12%;
 }
 
 ul {
@@ -16,21 +19,31 @@ ul {
 h1 {
     text-align: center;
     font-size: 48px;
+    margin-top: 2%;
 }
 
-#title {
-    font-size: 36px;
-    margin-bottom: 0;
+#feature {
+    display: flex;
+    flex-flow: row;
+}
+
+#info {
+    flex: 1;
 }
 
 #date {
     font-size: 20px;
+    width: 800px;
+    margin-left: 12%;
+    margin-top: 2%;
+    text-align: left;
 }
 
 #explanation {
-    width: 90%;
+    width: 500px;
     font-size: 18px;
-    margin-left: 5%;
+    margin-top: 2%;
+    margin-left: 12%;
 }
 
 a{
@@ -38,7 +51,7 @@ a{
 }
 
 h3 {
-    padding-top: 5%;
+    padding-top: 2%;
     text-align: right;
     width: 95%;
 }
