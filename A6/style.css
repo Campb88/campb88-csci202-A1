@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+    font-family: 'Inconsolata', monospace;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        url("https://www.thewholepetvet.com/blog/wp-content/uploads/2021/07/iStock-1224218370-768x512.jpg");
+    height: auto;
+    width: 100%;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+table {
+    float: left;
+    margin-left: 5%;
+    padding: 0;
+}
+
+h1 {
+    color: white;
+    text-align: left;
+    margin-left: 5.5%;
+    font-size: 54px;
+}
+
+#chatbot {
+    margin-top: 5%;
+    height: 100%;
+}
+
+#details {
+    color: white;
+}
+
+#details a {
+    color: white;
+    font-weight: bold;
+}
+
+#about {
+    background-color: white;
+    margin-left: 5%;
+    width: 90%;
+}
