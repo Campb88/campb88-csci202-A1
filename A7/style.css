@@ -1,0 +1,144 @@
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+body {
+    background-color: black;
+}
+
+#timer {
+    display: none;
+    font-size: 7em;
+    position: fixed;
+    left: 50%;
+    top: 10%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#startButton {
+    background-color: green;
+    color: white;
+    font-size: 7em;
+    font-weight: bold;
+    position: fixed;
+    left: 50%;
+    top: 70%;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.5s ease-in-out;
+}
+
+#startButton.hidden {
+    opacity: 0;
+}
+
+#nextButton {
+    margin-top: 2%;
+    background-color: gold;
+    color: white;
+    font-weight: bold;
+    font-size: 2em;
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 70%;
+    transform: translate(-50%, -50%);
+}
+
+
+#finishButton {
+    background-color: red;
+    color: white;
+    font-size: 6em;
+    font-weight: bold;
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 90%;
+    transform: translate(-50%, -50%);
+}
+
+#question {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+}
+
+#questionContent {
+    text-align: center;
+    padding-top: 40vh;
+    font-size: 1em;
+    line-height: .5;
+}
+
+#question2Content {
+    text-align: center;
+    padding-top: 20vh;
+    font-size: 1em;
+    line-height: .5;
+}
+
+.btn-primary {
+    background-color: green;
+    color: white;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+#questionForm .btn-primary {
+    margin-top: 2%;
+    background-color: green;
+    color: white;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+#answerInput {
+    color: black;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+    margin: 2%;
+
+}
+
+#welcome {
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    text-align: center;
+    margin: auto;
+    opacity: 1; /* Start with opacity 1 */
+    transition: opacity 0.5s ease-in-out; /* Add transition property */
+}
+
+#welcome h1 {
+    font-weight: bold;
+    font-size: 3em;
+}
+#welcome p {
+    font-weight: bold;
+}
+
+#welcome ul {
+    list-style: none;
+    line-height: 1.5;
+}
+
+#welcome.hidden,
+#timer.hidden,
+#startButton.hidden {
+    opacity: 0; /* Hide elements with opacity 0 */
+}

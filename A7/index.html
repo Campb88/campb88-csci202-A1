@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survivor Challenge</title>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <section id="start">
+            <div class="text-center">
+                <div id="welcome">
+                    <h1>Welcome to Your First Survivor Challenge!</h1>
+                    <p>Are you ready to embark on a mind-bending adventure?</p>
+                    <p>Prepare to test your wit, courage, and agility!</p>
+                    <p>Here's the deal:</p>
+                    <ul>
+                        <li>Climb the stairs, where tricky riddles await.</li>
+                        <li>Each step brings you closer to victory and brainiac glory.</li>
+                        <li>But beware! A single wrong answer can send you tumbling down!</li>
+                        <li>Descend to the next landing, where new mind-benders await.</li>
+                        <li>Be swift, be sharp, be the first to reach the final landing!</li>
+                    </ul>
+                    <p>So, tighten your mental gears and lace up those brain sneakers!</p>
+                    <p>Get ready to outsmart, outthink, and outpace your rivals!</p>
+                </div>
+
+                <div id="timer"></div>
+                <button id="startButton">Start</button>
+
+            </div>
+        </section>
+
+        <section id="question">
+            <div class="text-center my-4">
+                <div id="questionContent" style="display: none;">
+                    <p>In a world of assignments, they keep you on track,</p>
+                    <p>Their number of challenges, you must keep track.</p><br>
+                    <p>Subtract them by the days on this grand journey,</p>
+                    <p>To find the hidden answer, mystical and free.</p><br>
+                    <p>Now, subtract the wisdom of trees, serene and bright,</p>
+                    <p>From the result, bring forth your insight.</p><br>
+                    <p>Can you solve this riddle, clever and keen?</p>
+                    <p>And uncover the answer, as yet unseen?</p><br>
+                    <p>Take your time, let your thoughts unfurl,</p>
+                    <p>And when you're ready, share the answer with all your will.</p><br>
+                    <form id="questionForm">
+                        <div class="mb-3">
+                            <label for="answerInput" class="form-label"></label>
+                            <input type="number" id="answerInput" min="0" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+                <button id="questionButton" class="btn btn-primary">Reveal the Question</button>
+            </div>
+        </section>
+
+        <section id="question2">
+            <div class="text-center my-4">
+              <div id="question2Content" style="display: none;">
+                <p>In the realm of numbers, a mystery unfolds,</p>
+                <p>A riddle of complexity, as it beholds.</p><br>
+                <p>Start with the stairs, each step that you've scaled,</p>
+                <p>Subtract the previous answer, a secret unveiled.</p><br>
+                <p>From this result, subtract the day of the month,</p>
+                <p>But hold your breath, there's more to confront.</p><br>
+                <p>Add the starting hour, a subtle twist,</p>
+                <p>Now, with cunning and wit, solve this bit,</p><br>
+                <p>Reveal the elusive number that quietly stays.</p>
+      
+                <form id="question2Form">
+                  <div class="mb-3">
+                    <label for="answerInput" class="form-label"></label>
+                    <input type="number" id="answerInput" min="0" required>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+              </div>
+              <button id="nextButton">Next Question</button>
+            </div>
+          </section>
+
+
+
+        <section>
+            <div class="text-center my-4">
+                <button id="finishButton" class="btn btn-danger">Finish</button>
+            </div>
+        </section>
+
+
+    </div>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/js/bootstrap.bundle.min.js"></script>
+    <script src="your-script.js"></script>
+</body>
+
+</html>
