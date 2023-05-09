@@ -158,6 +158,9 @@ body {
 #lastPhase {
     padding-top: 10em;
     max-width: 700px;
+    position: fixed;
+    top: 5%;
+    left: 25%;
 }
 
 #lastPhase h1 {
@@ -171,8 +174,6 @@ body {
     text-align: center;
     font-size: 2em;
 }
-
-
 
 #finish {
     position: fixed;
@@ -261,10 +262,13 @@ body {
     #lastPhase {
         max-width: 400px;
         min-width: 350px;
+        left: 0%;
     }
 
     #lastPhase p {
         font-size: 1em;
+        max-width: 350px;
+        padding-left: 10px;
     }
 
     #finishButton {
@@ -279,8 +283,8 @@ body {
     #finish p{
         font-size: 1em;
         line-height: 1;
-        max-width: 350px;
-        padding-left: 7px;
+        max-width: 300px;
+        padding-left: 35px;
     }
 
 }

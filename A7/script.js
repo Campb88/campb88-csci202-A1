@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+addEventListener("DOMContentLoaded", function () {
     const startButton = document.getElementById("startButton");
     const welcome = document.getElementById("welcome");
     const timerElement = document.getElementById("timer");
@@ -8,11 +8,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const questionForm = document.getElementById("questionForm");
     const answerInput = document.getElementById("answerInput");
     const nextButton = document.getElementById("nextButton");
-    const question2 = document.getElementById("question2Content");
+    const question2Content = document.getElementById("question2Content");
     const finishButton = document.getElementById("finishButton");
     const lastPhase = document.getElementById("lastPhase");
     const finish = document.getElementById("finish");
-
+  
     const finishMessage = document.createElement("p");
   
     let timerInterval;
@@ -66,8 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
       event.preventDefault();
   
       const assignments = 7;
-      const wisdomOfTrees = 15;                                         // need to confirm
-  
+      const wisdomOfTrees = 15;
       const daysSinceStart = Math.floor(
         (new Date() - new Date("2023-03-28")) / (1000 * 60 * 60 * 24)
       );
@@ -79,9 +78,8 @@ document.addEventListener("DOMContentLoaded", function () {
         questionContent.style.display = "none";
         nextButton.style.display = "block";
         nextPhase.style.display = "block";
-
       } else {
-        alert("That's not the correct answer. Try again.");
+        alert("Wrong Answer!");
         console.log("The correct answer is:", answer);
       }
   
@@ -89,46 +87,43 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   
     nextButton.addEventListener("click", function () {
-      question2.style.display = "block";
+      question2Content.style.display = "block";
       nextButton.style.display = "none";
       nextPhase.style.display = "none";
     });
-
-    document.getElementById("question2Form").addEventListener("submit", function(event) {
-        event.preventDefault();
-        
-        // Retrieve user's answer from the input field
-        const userAnswer = parseInt(event.target.querySelector("#answerInput").value, 10);
-        
-        const previousAnswer = answer;
-        const currentDayOfMonth = new Date().getDate();
-        const classStartTime = 10;
-        const stairsClimbed = 65;
-        const expectedAnswer = stairsClimbed - (previousAnswer + currentDayOfMonth - classStartTime);
-        
-        // Check if the user's answer is correct
-        if (userAnswer === expectedAnswer) {
-          // Display success message
-          question2Content.style.display = "none";
-          lastPhase.style.display = "block";
-          finishButton.style.display = "block";
-        } else {
-            alert("That's not the correct answer. Try again.");
-            console.log("User's answer:", userAnswer);
-            console.log("Expected answer:", expectedAnswer);
-        }
-        answerInput.value = "";
-      });
-
-      finishButton.addEventListener("click", function () {
-        finishButton.style.display = "none";
-        finishMessage.style.display = "none";
-        finishTimer();
-        timerElement.style.color = "red";
-        finish.style.display = "block";
-        lastPhase.style.display = "none";
-
-      });
-      
-      
+  
+    document.getElementById("question2Form").addEventListener("submit", function (event) {
+      event.preventDefault();
+  
+      const previousAnswer = answer;
+      const currentDayOfMonth = new Date().getDate();
+      const classStartTime = 10;
+      const stairsClimbed = 65;
+      const expectedAnswer = stairsClimbed - (previousAnswer + currentDayOfMonth - classStartTime);
+  
+      // Retrieve user's answer from the input field
+      const userAnswer = parseInt(event.target.querySelector("#answerInput").value, 10);
+      if (userAnswer === expectedAnswer) {
+        // Display success message
+        question2Content.style.display = "none";
+        lastPhase.style.display = "block";
+        finishButton.style.display = "block";
+      } else {
+        alert("Wrong Answer!");
+        console.log("Expected answer:", expectedAnswer);
+      }
+      answerInput.value = "";
+    });
+  
+    finishButton.addEventListener("click", function () {
+      finishButton.style.display = "none";
+      finishMessage.style.display = "none";
+      finishTimer();
+      timerElement.style.color = "red";
+      finish.style.display = "block";
+      lastPhase.style.display = "none";
+    });
   });
+  
+     
+  
