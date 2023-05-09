@@ -22,7 +22,7 @@
                 <div id="welcome">
                     <h1>Welcome to Your First Survivor Challenge!</h1>
                     <p>Are you ready to embark on a mind-bending adventure?</p>
-                    <p>Prepare to test your wit, courage, and agility!</p>
+                    <p>Prepare to test your wit, courage, and agility!</p><br>
                     <p>Here's the deal:</p>
                     <ul>
                         <li>Climb the stairs, where tricky riddles await.</li>
@@ -31,6 +31,7 @@
                         <li>Descend to the next landing, where new mind-benders await.</li>
                         <li>Be swift, be sharp, be the first to reach the final landing!</li>
                     </ul>
+                    <br>
                     <p>So, tighten your mental gears and lace up those brain sneakers!</p>
                     <p>Get ready to outsmart, outthink, and outpace your rivals!</p>
                 </div>
@@ -62,7 +63,14 @@
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </form>
                 </div>
-                <button id="questionButton" class="btn btn-primary">Reveal the Question</button>
+                      <button id="questionButton" class="btn btn-primary">Reveal the Question</button>
+                  </div>
+                
+                <div id="nextPhase" class="text-center my-4" style="display: none;">
+                      <h1>Well done!</h1>
+                      <p>Progress to the next landing to start the next phase of this challenge.</p>
+                  </div>
+                  
             </div>
         </section>
 
@@ -89,6 +97,22 @@
               </div>
               <button id="nextButton">Next Question</button>
             </div>
+
+            <div id="lastPhase" class="text-center my-4" style="display: none;">
+                <h1>Well done!</h1>
+                <p>Race to the bottom of the stairs and press the button below to complete the challenge.</p>
+            </div>
+          </section>
+
+          <section id="finish" style="display: none;">
+            <div class="text-center my-4">
+              <h1>Congratulations, Survivor!</h1>
+              <p>You have overcome every challenge with your wit and determination.
+              Now, it's time to compare your journey with your fellow competitors.
+              Reach out to them and see who completed the challenge in the best time.
+              Remember, in the world of survivors, victory is shared and celebrated together.
+              Stay hungry, stay fierce, and embrace the next journey that lies ahead.</p>
+            </div>
           </section>
 
 
@@ -101,9 +125,6 @@
 
 
     </div>
-
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/js/bootstrap.bundle.min.js"></script>
-    <script src="your-script.js"></script>
 </body>
 
 </html>

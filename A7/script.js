@@ -10,8 +10,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const nextButton = document.getElementById("nextButton");
     const question2 = document.getElementById("question2Content");
     const finishButton = document.getElementById("finishButton");
+    const lastPhase = document.getElementById("lastPhase");
+    const finish = document.getElementById("finish");
 
-    const nextPhaseMessage = document.createElement("p");
     const finishMessage = document.createElement("p");
   
     let timerInterval;
@@ -77,15 +78,11 @@ document.addEventListener("DOMContentLoaded", function () {
       if (userAnswer === answer) {
         questionContent.style.display = "none";
         nextButton.style.display = "block";
-        nextPhaseMessage.innerHTML =
-          "Well done!<br>Go to the next landing to start the next phase of this challenge.";
-        nextPhaseMessage.style.textAlign = "center";
-        nextPhaseMessage.style.paddingTop = "7em";
-        nextPhaseMessage.style.fontSize = "3em";
-        question.appendChild(nextPhaseMessage);
+        nextPhase.style.display = "block";
 
       } else {
         alert("That's not the correct answer. Try again.");
+        console.log("The correct answer is:", answer);
       }
   
       answerInput.value = "";
@@ -94,16 +91,15 @@ document.addEventListener("DOMContentLoaded", function () {
     nextButton.addEventListener("click", function () {
       question2.style.display = "block";
       nextButton.style.display = "none";
-      nextPhaseMessage.style.display = "none";
+      nextPhase.style.display = "none";
     });
 
     document.getElementById("question2Form").addEventListener("submit", function(event) {
         event.preventDefault();
         
         // Retrieve user's answer from the input field
-        const userAnswer = parseInt(document.getElementById("answerInput").value);
+        const userAnswer = parseInt(event.target.querySelector("#answerInput").value, 10);
         
-        // Calculate the expected answer
         const previousAnswer = answer;
         const currentDayOfMonth = new Date().getDate();
         const classStartTime = 10;
@@ -114,17 +110,14 @@ document.addEventListener("DOMContentLoaded", function () {
         if (userAnswer === expectedAnswer) {
           // Display success message
           question2Content.style.display = "none";
-          finishMessage.innerHTML =
-            "Well done!<br>Race to the bottom of the stairs and press the button below to complete the challenge.";
-          finishMessage.style.textAlign = "center";
-          finishMessage.style.paddingTop = "7em";
-          finishMessage.style.fontSize = "3em";
-          question.appendChild(finishMessage);
+          lastPhase.style.display = "block";
           finishButton.style.display = "block";
         } else {
-          // Display error message
-          document.getElementById("questionContent").innerHTML = "<p>Oops! That's not the correct answer. Try again!</p>";
+            alert("That's not the correct answer. Try again.");
+            console.log("User's answer:", userAnswer);
+            console.log("Expected answer:", expectedAnswer);
         }
+        answerInput.value = "";
       });
 
       finishButton.addEventListener("click", function () {
@@ -132,7 +125,9 @@ document.addEventListener("DOMContentLoaded", function () {
         finishMessage.style.display = "none";
         finishTimer();
         timerElement.style.color = "red";
-        timerElement.style.paddingTop = "4em";
+        finish.style.display = "block";
+        lastPhase.style.display = "none";
+
       });
       
       

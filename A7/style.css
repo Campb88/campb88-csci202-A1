@@ -25,11 +25,11 @@ body {
 #startButton {
     background-color: green;
     color: white;
-    font-size: 7em;
+    font-size: 5em;
     font-weight: bold;
     position: fixed;
     left: 50%;
-    top: 70%;
+    top: 85%;
     transform: translate(-50%, -50%);
     transition: opacity 0.5s ease-in-out;
 }
@@ -60,7 +60,7 @@ body {
     display: none;
     position: fixed;
     left: 50%;
-    top: 90%;
+    top: 70%;
     transform: translate(-50%, -50%);
 }
 
@@ -76,7 +76,9 @@ body {
     text-align: center;
     padding-top: 40vh;
     font-size: 1em;
-    line-height: .5;
+    line-height: 0.5;
+    width: 110%; /* Adjust the width value as needed */
+    margin: 0 auto; /* Centers the element horizontally */
 }
 
 #question2Content {
@@ -113,7 +115,7 @@ body {
 #welcome {
     position: absolute;
     left: 50%;
-    top: 30%;
+    top: 35%;
     transform: translate(-50%, -50%);
     width: 100%;
     max-width: 500px;
@@ -137,8 +139,150 @@ body {
     line-height: 1.5;
 }
 
+#nextPhase {
+    padding-top: 10em;
+}
+
+#nextPhase h1 {
+    font-weight: bold;
+    font-size: 4em;
+    text-align: center;
+}
+
+#nextPhase p {
+    font-weight: bold;
+    text-align: center;
+    font-size: 2em;
+}
+
+#lastPhase {
+    padding-top: 10em;
+    max-width: 700px;
+}
+
+#lastPhase h1 {
+    font-weight: bold;
+    font-size: 4em;
+    text-align: center;
+}
+
+#lastPhase p {
+    font-weight: bold;
+    text-align: center;
+    font-size: 2em;
+}
+
+
+
+#finish {
+    position: fixed;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 700px;
+    padding: 20px;
+    text-align: center;
+    margin: auto;
+    opacity: 1; /* Start with opacity 1 */
+    transition: opacity 0.5s ease-in-out; /* Add transition property */
+
+}
+
 #welcome.hidden,
 #timer.hidden,
 #startButton.hidden {
     opacity: 0; /* Hide elements with opacity 0 */
 }
+
+
+/* Media query for screens with a maximum width of 480px */
+@media screen and (max-width: 480px) {
+    
+    #welcome{
+        width: 100%;
+        min-width: 300px;
+        max-width: 450px;
+        top: 45%;
+        margin: 10px;
+        text-align: left;
+    }
+    #welcome h1 {
+        font-size: 2em;
+    }
+    #welcome p {
+        font-size: 1em;
+        line-height: 1;
+    }
+    ul {
+        line-height: 1;
+        font-size: .8em;
+        padding-left: 10px;
+        max-width: 350px;
+        padding-bottom: 0px;
+    }
+
+    #timer {
+        font-size: 3em;
+    }
+
+    #startButton {
+        top: 85%;
+        font-size: 3em;
+    }
+
+    #question {
+        max-width: 450px;
+        width: 100%;
+        padding-left: 0;
+        left: 45%;
+    }
+
+    #questionContent {
+        font-size: .9em;
+    }
+
+    #questionButton {
+        position: fixed;
+        top: 50%;
+        left: 15%;
+        font-size: 2em;
+    }
+
+    #nextPhase p{
+        padding-left: 10%;
+        font-size: 1em;
+    }
+
+    #nextPhase h1{
+        padding-left: 10%;
+    }
+
+    #lastPhase {
+        max-width: 400px;
+        min-width: 350px;
+    }
+
+    #lastPhase p {
+        font-size: 1em;
+    }
+
+    #finishButton {
+        top: 80%;
+    }
+
+    #finish {
+        max-width: 400px;
+        min-width: 350px;
+    }
+
+    #finish p{
+        font-size: 1em;
+        line-height: 1;
+        max-width: 350px;
+        padding-left: 7px;
+    }
+
+}
+
+
