@@ -12,6 +12,8 @@ addEventListener("DOMContentLoaded", function () {
     const finishButton = document.getElementById("finishButton");
     const lastPhase = document.getElementById("lastPhase");
     const finish = document.getElementById("finish");
+    const hint = document.getElementById("hint");
+    const hint2 = document.getElementById("hint2");
   
   
     let timerInterval;
@@ -65,12 +67,10 @@ addEventListener("DOMContentLoaded", function () {
       event.preventDefault();
   
       const assignments = 7;
-      const wisdomOfTrees = 15;
-      const daysSinceStart = Math.floor(
-        (new Date() - new Date("2023-03-28")) / (1000 * 60 * 60 * 24)
-      );
+      const trees = 9;
+      const weeks = 12;
   
-      answer = daysSinceStart - assignments - wisdomOfTrees;
+      answer = weeks - assignments + trees;
       const userAnswer = parseInt(answerInput.value);
   
       if (userAnswer === answer) {
@@ -78,13 +78,14 @@ addEventListener("DOMContentLoaded", function () {
         nextButton.style.display = "block";
         nextPhase.style.display = "block";
       } else {
+        console.log("Expected answer:", answer);
+        hint.style.display = "block";
         Swal.fire({
           icon: 'error',
           title: 'Jeff Probst says...',
           text: "Wrong Answer!",
-        }).then(() => {
-          console.log("Expected answer:", expectedAnswer);
-        });
+        })
+        
       }
   
       answerInput.value = "";
@@ -102,8 +103,8 @@ addEventListener("DOMContentLoaded", function () {
       const previousAnswer = answer;
       const currentDayOfMonth = new Date().getDate();
       const classStartTime = 10;
-      const stairsClimbed = 65;
-      const expectedAnswer = stairsClimbed - (previousAnswer + currentDayOfMonth - classStartTime);
+      const stairsClimbed = 25;
+      const expectedAnswer = (stairsClimbed - previousAnswer) - currentDayOfMonth + classStartTime;
   
       // Retrieve user's answer from the input field
       const userAnswer = parseInt(event.target.querySelector("#answerInput").value, 10);
@@ -113,13 +114,14 @@ addEventListener("DOMContentLoaded", function () {
         lastPhase.style.display = "block";
         finishButton.style.display = "block";
       } else {
+        console.log("Expected answer:", expectedAnswer);
+        hint2.style.display = "block";
         Swal.fire({
             icon: 'error',
             title: 'Jeff Probst says...',
             text: "Wrong Answer!",
-        }).then(() => {
-          console.log("Expected answer:", expectedAnswer);
-        });
+        })
+        
       }
       answerInput.value = "";
     });
@@ -131,6 +133,7 @@ addEventListener("DOMContentLoaded", function () {
         finishTimer();
         timerElement.style.color = "red";
       });
+      
   });
   
      

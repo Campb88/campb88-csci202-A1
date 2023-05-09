@@ -29,9 +29,14 @@ body {
   font-weight: bold;
   position: fixed;
   left: 50%;
-  top: 85%;
+  top: 80%;
   transform: translate(-50%, -50%);
   transition: opacity 0.5s ease-in-out;
+}
+
+#hint, #hint2 {
+  color: red;
+  font-weight: bold;
 }
 
 #startButton.hidden {
@@ -113,7 +118,7 @@ body {
 #welcome {
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 30%;
   transform: translate(-50%, -50%);
   width: 100%;
   max-width: 1000px;
@@ -177,7 +182,7 @@ body {
   #finish {
     position: fixed;
     left: 50%;
-    top: 40%;
+    top: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
     max-width: 700px;
@@ -227,7 +232,8 @@ body {
     }
   
     #startButton {
-      top: 85%;
+      top: 80%;
+      margin-top: 2em;
       font-size: 3em;
     }
   
@@ -279,7 +285,7 @@ body {
     }
   
     #finish p {
-        font-size: 1em;
+        font-size: .76em;
         line-height: 1;
         max-width: 300px;
         padding-left: 35px;
