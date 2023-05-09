@@ -13,7 +13,6 @@ addEventListener("DOMContentLoaded", function () {
     const lastPhase = document.getElementById("lastPhase");
     const finish = document.getElementById("finish");
   
-    const finishMessage = document.createElement("p");
   
     let timerInterval;
     let startTime;
@@ -79,8 +78,13 @@ addEventListener("DOMContentLoaded", function () {
         nextButton.style.display = "block";
         nextPhase.style.display = "block";
       } else {
-        alert("Wrong Answer!");
-        console.log("The correct answer is:", answer);
+        Swal.fire({
+          icon: 'error',
+          title: 'Jeff Probst says...',
+          text: "Wrong Answer!",
+        }).then(() => {
+          console.log("Expected answer:", expectedAnswer);
+        });
       }
   
       answerInput.value = "";
@@ -109,20 +113,24 @@ addEventListener("DOMContentLoaded", function () {
         lastPhase.style.display = "block";
         finishButton.style.display = "block";
       } else {
-        alert("Wrong Answer!");
-        console.log("Expected answer:", expectedAnswer);
+        Swal.fire({
+            icon: 'error',
+            title: 'Jeff Probst says...',
+            text: "Wrong Answer!",
+        }).then(() => {
+          console.log("Expected answer:", expectedAnswer);
+        });
       }
       answerInput.value = "";
     });
   
     finishButton.addEventListener("click", function () {
-      finishButton.style.display = "none";
-      finishMessage.style.display = "none";
-      finishTimer();
-      timerElement.style.color = "red";
-      finish.style.display = "block";
-      lastPhase.style.display = "none";
-    });
+        finishButton.style.display = "none";
+        finish.style.display = "block";
+        lastPhase.style.display = "none";
+        finishTimer();
+        timerElement.style.color = "red";
+      });
   });
   
      

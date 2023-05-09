@@ -118,7 +118,7 @@ body {
     top: 35%;
     transform: translate(-50%, -50%);
     width: 100%;
-    max-width: 500px;
+    max-width: 1000px;
     padding: 20px;
     text-align: center;
     margin: auto;
@@ -129,6 +129,7 @@ body {
 #welcome h1 {
     font-weight: bold;
     font-size: 3em;
+    padding-bottom: 2%;
 }
 #welcome p {
     font-weight: bold;
