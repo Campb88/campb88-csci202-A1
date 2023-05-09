@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survivor Challenge</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <section id="start">
+            <div class="text-center">
+                <div id="welcome">
+                    <h1>Welcome to Your First Survivor Challenge!</h1>
+                    <p>Are you ready to embark on a mind-bending adventure?</p>
+                    <p>Prepare to test your wit, courage, and agility!</p><br>
+                    <p>Here's the deal:</p>
+                    <ul>
+                        <li>Climb the stairs, where tricky riddles await.</li>
+                        <li>Each step brings you closer to victory and brainiac glory.</li>
+                        <li>But beware! A single wrong answer can send you tumbling down!</li>
+                        <li>Descend to the next landing, where new mind-benders await.</li>
+                        <li>Be swift, be sharp, be the first to reach the final landing!</li>
+                    </ul>
+                    <br>
+                    <p>So, tighten your mental gears and lace up those brain sneakers!</p>
+                    <p>Get ready to outsmart, outthink, and outpace your rivals!</p>
+                </div>
+                <div id="timer"></div>
+                <div id="progressBar" style="display: none;">
+                    <div id="progress"></div>
+                  </div>
+                  
+                <button id="startButton">Start</button>
+            </div>
+        </section>
+        <section id="question">
+            <div class="text-center my-4">
+                <div id="questionContent" style="display: none;">
+                    <p>In a world of assignments, they keep you on track,</p>
+                    <p>Their number of challenges, you must keep track.</p><br><br>
+                    <p>Subtract them by the days on this grand journey,</p>
+                    <p>To find the hidden answer, mystical and free.</p><br>
+                    <p>Now, subtract the wisdom of trees, serene and bright,</p>
+                    <p>From the result, bring forth your insight.</p><br><br>
+                    <p>Can you solve this riddle, clever and keen?</p>
+                    <p>And uncover the answer, as yet unseen?</p><br><br>
+                    <p>Take your time, let your thoughts unfurl,</p>
+                    <p>And when you're ready, share the answer with all your will.</p><br>
+                    <form id="questionForm">
+                        <div class="mb-3">
+                            <label for="answerInput" class="form-label"></label>
+                            <input type="number" id="answerInput" min="0" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+                <button id="questionButton" class="btn btn-primary">Reveal the Question</button>
+            </div>
+            <div id="nextPhase" class="text-center my-4" style="display: none;">
+                <h1>Well done!</h1>
+                <p>Progress to the next landing to start the next phase of this challenge.</p>
+            </div>
+    </div>
+    </section>
+
+    <section id="question2">
+        <div class="text-center my-4">
+            <div id="question2Content" style="display: none;">
+                <p>In the realm of numbers, a mystery unfolds,</p>
+                <p>A riddle of complexity, as it beholds.</p><br><br>
+                <p>Start with the stairs, each step that you've scaled,</p>
+                <p>Subtract the previous answer, a secret unveiled.</p><br><br>
+                <p>From this result, subtract the day of the month,</p>
+                <p>But hold your breath, there's more to confront.</p><br><br>
+                <p>Add the starting hour, a subtle twist,</p>
+                <p>Now, with cunning and wit, solve this bit,</p><br><br>
+                <p>Reveal the elusive number that quietly stays.</p>
+
+                <form id="question2Form">
+                    <div class="mb-3">
+                        <label for="answerInput" class="form-label"></label>
+                        <input type="number" id="answerInput" min="0" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+            <button id="nextButton">Next Question</button>
+        </div>
+
+        <div id="lastPhase" class="text-center my-4" style="display: none;">
+            <h1>Well done!</h1>
+            <p>Race to the bottom of the stairs and press the button below to complete the challenge.</p>
+        </div>
+    </section>
+
+    <section id="finish" style="display: none;">
+        <div class="text-center my-4">
+            <h1>Congratulations, Survivor!</h1>
+            <p>You have overcome every challenge with your wit and determination.
+                Now, it's time to compare your journey with your fellow competitors.
+                Reach out to them and see who completed the challenge in the best time.
+                Remember, in the world of survivors, victory is shared and celebrated together.
+                Stay hungry, stay fierce, and embrace the next journey that lies ahead.</p>
+        </div>
+    </section>
+
+    <section>
+        <div class="text-center my-4">
+            <button id="finishButton" class="btn btn-danger">Finish</button>
+        </div>
+    </section>
+    </div>
+</body>
+
+</html>
