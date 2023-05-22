@@ -1,3 +1,8 @@
+function goToArcadeInterface() {
+    window.location.href = 'index.html'; // Replace with the path to your arcade interface HTML file
+  }
+  
+  
 // Get the canvas element and its context
 const canvas = document.getElementById("gameCanvas");
 const context = canvas.getContext("2d");
