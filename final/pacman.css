@@ -4,6 +4,10 @@ body {
     background-color: darkgray;
 }
 
+* {
+    font-family: 'Press Start 2P', cursive;
+}
+
 /* Styles for the Pac-Man canvas */
 #gameCanvas {
     border: 1px solid black;
@@ -21,7 +25,6 @@ body {
 }
 
 #startButton {
-    font-family: 'Press Start 2P', cursive;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -40,11 +43,9 @@ body {
 }
 
 #backButton {
-    font-family: 'Press Start 2P', cursive;
     position: fixed;
-    bottom: 1%;
-    right: 50%;
-    transform: translate(-50%, -50%);
+    top: 18%;
+    left: 10%;
     padding: 10px 20px;
     font-size: 16px;
     background-color: #d62525;
@@ -57,3 +58,21 @@ body {
 #backButton:hover {
     background-color: #bc2121;
 }
+
+#scoreBoard {
+    position: fixed;
+    top: 10%;
+    left:10%;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.level-text {
+    color: yellow;
+    position: absolute;
+    font-size: 48px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
